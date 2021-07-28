@@ -6,7 +6,7 @@ import datetime as dt
 face_cascade=cv2.CascadeClassifier(r'C:\Users\Priyanshu\AppData\Local\Programs\Python\Python39\Lib\site-packages\cv2\data\haarcascade_frontalface_alt2.xml')
 recognizer=cv2.face.LBPHFaceRecognizer_create()
 recognizer.read('trainer2.yml')
-df=pd.read_csv(r'attendence.csv',index_col='Label_Ids')
+df=pd.read_csv(r'attendance.csv',index_col='Label_Ids')
 name='Not Recognized'
 
 #defining columns
@@ -69,7 +69,7 @@ while(True):
                 df.loc[id_,today]='Present'
                 print('')
                 print('')
-                print('Attendence Marked for '+name)
+                print('Attendance Marked for '+name)
 
             else:
                 df.loc[id_,today]='Late'
@@ -78,7 +78,7 @@ while(True):
                 print('You are late '+name)
                 
             print(df)
-            df.to_csv(r'attendence.csv')
+            df.to_csv(r'attendance.csv')
 cap.release()
 cv2.destroyAllWindows()
 

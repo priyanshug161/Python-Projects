@@ -49,7 +49,7 @@ for i in names:
 d=pd.DataFrame({'Label_Ids':ids,'Names':names})
 #print(d.set_index('Label_Ids'))
 print(label_ids)
-d.set_index('Label_Ids').to_csv(r'attendence.csv')
+d.set_index('Label_Ids').to_csv(r'attendance.csv')
 '''
 print(d)
 print(y_labels)
